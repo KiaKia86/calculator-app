@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Start Page -->
+    <div id="start-page">
+        <h1>Welcome to the Scientific Calculator</h1>
+        <button id="start-button">Start</button>
+    </div>
+
+    <!-- Calculator -->
+    <div class="calculator hidden">
+        <!-- Display -->
+        <div class="display">
+            <input type="text" id="display" disabled>
+        </div>
+
+        <!-- History Panel -->
+        <div class="history-panel">
+            <h3>History</h3>
+            <ul id="history-list"></ul>
+            <button id="clear-history">Clear History</button>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <!-- Scientific Functions -->
+            <button class="btn scientific" data-value="sin">sin</button>
+            <button class="btn scientific" data-value="cos">cos</button>
+            <button class="btn scientific" data-value="tan">tan</button>
+            <button class="btn scientific" data-value="log">log</button>
+            <button class="btn scientific" data-value="ln">ln</button>
+            <button class="btn scientific" data-value="sqrt">√</button>
+            <button class="btn scientific" data-value="pow">^</button>
+            <button class="btn scientific" data-value="pi">π</button>
+            <button class="btn scientific" data-value="e">e</button>
+            <button class="btn scientific" data-value="(">(</button>
+            <button class="btn scientific" data-value=")">)</button>
+            <button class="btn scientific" data-value="fact">!</button>
+            <button class="btn scientific" data-value="deg">DEG</button>
+            <button class="btn scientific" data-value="rad">RAD</button>
+
+            <!-- Numbers and Operators -->
+            <button class="btn number" data-value="7">7</button>
+            <button class="btn number" data-value="8">8</button>
+            <button class="btn number" data-value="9">9</button>
+            <button class="btn operator" data-value="/">÷</button>
+            <button class="btn number" data-value="4">4</button>
+            <button class="btn number" data-value="5">5</button>
+            <button class="btn number" data-value="6">6</button>
+            <button class="btn operator" data-value="*">×</button>
+            <button class="btn number" data-value="1">1</button>
+            <button class="btn number" data-value="2">2</button>
+            <button class="btn number" data-value="3">3</button>
+            <button class="btn operator" data-value="-">−</button>
+            <button class="btn number" data-value="0">0</button>
+            <button class="btn number" data-value=".">.</button>
+            <button class="btn operator" data-value="+">+</button>
+            <button class="btn equals" data-value="=">=</button>
+
+            <!-- Clear and Backspace -->
+            <button class="btn clear" data-value="clear">C</button>
+            <button class="btn backspace" data-value="backspace">⌫</button>
+
+            <!-- Memory Functions -->
+            <button class="btn memory" data-value="MC">MC</button>
+            <button class="btn memory" data-value="MR">MR</button>
+            <button class="btn memory" data-value="MS">MS</button>
+            <button class="btn memory" data-value="M+">M+</button>
+            <button class="btn memory" data-value="M-">M-</button>
+        </div>
+
+        <!-- Theme Switcher and Help Button -->
+        <div class="theme-switcher">
+            <button id="light-theme">Light</button>
+            <button id="dark-theme">Dark</button>
+            <button id="help-button">Help</button>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="help-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal">&times;</span>
+            <h2>How to Use the Calculator</h2>
+            <p>
+                <strong>Basic Operations:</strong><br>
+                Use <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> for addition, subtraction, multiplication, and division.<br>
+                Example: <code>2 + 3 * 4 =</code> → <code>14</code>
+            </p>
+            <p>
+                <strong>Scientific Functions:</strong><br>
+                Use <code>sin</code>, <code>cos</code>, <code>tan</code>, <code>log</code>, <code>ln</code>, <code>sqrt</code>, <code>^</code>, <code>!</code>.<br>
+                Example: <code>sin(30) =</code> → <code>0.5</code> (in degree mode)
+            </p>
+            <p>
+                <strong>Constants:</strong><br>
+                Use <code>π</code> for pi and <code>e</code> for Euler's number.<br>
+                Example: <code>π =</code> → <code>3.141592653589793</code>
+            </p>
+            <p>
+                <strong>Memory Functions:</strong><br>
+                Use <code>MC</code>, <code>MR</code>, <code>MS</code>, <code>M+</code>, <code>M-</code> for memory operations.<br>
+                Example: <code>5 MS</code>, <code>MR</code> → <code>5</code>
+            </p>
+            <p>
+                <strong>Error Handling:</strong><br>
+                Invalid inputs will display an error message.<br>
+                Example: <code>2 / 0 =</code> → <code>Error: Division by zero</code>
+            </p>
+        </div>
+    </div>
+
+    <script src="scripts/calculator.js"></script>
+    <script src="scripts/history.js"></script>
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/units.js"></script>
+    <script src="scripts/memory.js"></script>
+    <script src="scripts/help.js"></script>
+    <script src="scripts/start.js"></script>
+</body>
+</html>
